@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="w-full h-screen flex items-center justify-center">
 
-      <div className={`${isGreen ? "bg-green-500" : "bg-red-500"} w-[100px] h-[100px]`}>
+      <div className={`${isGreen ? "bg-green-500" : "bg-purple-500"} w-[100px] h-[100px]`}>
 
       </div>
 
