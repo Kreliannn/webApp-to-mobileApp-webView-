@@ -1,6 +1,15 @@
 "use client"
 import { useState } from "react";
 
+declare global {
+  interface Window {
+    Android: {
+      triggerPrint: () => void;
+    };
+  }
+}
+
+
 export default function Home() {
 
   const [isGreen, setIsGreen] = useState(true)
@@ -9,6 +18,9 @@ export default function Home() {
   const handleClick = () => {
     alert("printing")
     setIsGreen((prev) => !prev)
+    if (window.Android && window.Android.triggerPrint) {
+      window.Android.triggerPrint();
+    }
   }
 
 
